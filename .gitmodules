@@ -1,0 +1,3 @@
+[submodule "get-anime-apps"]
+	path = get-anime-apps
+	url = https://github.com/GET-Animes/get-anime-apps
