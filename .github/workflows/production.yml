@@ -1,9 +1,9 @@
-name: Build and Deploy to Internal Test
+name: Build and Deploy Flutter Web
 
 on:
   push:
     branches:
-      - main
+      - pipeline
 
 env:
   FLUTTER_VERSION: "3.32.0"
@@ -51,6 +51,7 @@ jobs:
         run: |
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
+          git checkout main
           git add .
-          git commit -m "Build Release Web"
-          git push
+          git commit -m "Deploy Web From Action [skip ci]"
+          git push origin main
