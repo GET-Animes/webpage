@@ -7868,7 +7868,7 @@ Ir:function Ir(a,b,c){this.a=a
 this.b=b
 this.c=c},
 Bz:function Bz(){},
-aJY(){var s=A.aIH("http://192.168.50.225:3333/api",B.lP,B.lP),r=new A.KF(A.b([B.A4],t.i6)),q=new A.Jb($,r,$,new A.a3D(51200),!1)
+aJY(){var s=A.aIH("https://c6chi5las3t3ubqmwftoigrtze0xzrxa.lambda-url.sa-east-1.on.aws/api",B.lP,B.lP),r=new A.KF(A.b([B.A4],t.i6)),q=new A.Jb($,r,$,new A.a3D(51200),!1)
 q.Uc$=s
 q.Ud$=new A.Z_(A.ay(t.m))
 r.E(r,new A.zI())
