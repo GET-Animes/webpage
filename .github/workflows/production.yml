@@ -40,11 +40,12 @@ jobs:
 
       - name: Build Release Web
         run: |
-          cd get_animes_apps
+          cd get-anime-apps
           melos bs
-          flutter build web --release --base-href "/webpage/"
-          cd ..
-          cp -f get_animes_apps/apps/web/build/web/* .
+          cd apps/web                    
+          flutter build web --release --base-href "/webpage/"                    
+          cd ../../../                   
+          cp -rf ./get-anime-apps/apps/web/build/web/* ./
 
       - name: Create Commit for Deploy
         run: |
