@@ -21,6 +21,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           submodules: recursive
+          token: ${{ secrets.CI_CD_WEB }}
 
       - name: Set up JDK
         uses: actions/setup-java@v4
@@ -46,8 +47,6 @@ jobs:
           cp -f get_animes_apps/apps/web/build/web/* .
 
       - name: Create Commit for Deploy
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
