@@ -3,7 +3,7 @@ name: Build and Deploy to Internal Test
 on:
   push:
     branches:
-      - main
+      - pipeline
 
 env:
   FLUTTER_VERSION: "3.27.2"
@@ -20,7 +20,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          submodules: true
+          submodules: recursive
 
       - name: Set up JDK
         uses: actions/setup-java@v4
@@ -51,6 +51,7 @@ jobs:
         run: |
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
+          git checkout main
           git add .
           git commit -m "Build Release Web"
           git push
