@@ -3,7 +3,7 @@ name: Build and Deploy to Internal Test
 on:
   push:
     branches:
-      - pipeline
+      - main
 
 env:
   FLUTTER_VERSION: "3.32.0"
